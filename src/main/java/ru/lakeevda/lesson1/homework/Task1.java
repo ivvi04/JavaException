@@ -2,7 +2,7 @@ package ru.lakeevda.lesson1.homework;
 
 public class Task1 {
     public static void main(String[] args) {
-        Answer ans = new Answer();
+        Answer1 ans = new Answer1();
         try {
             ans.arrayOutOfBoundsException();
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -23,7 +23,7 @@ public class Task1 {
     }
 }
 
-class Answer {
+class Answer1 {
     public static void arrayOutOfBoundsException() {
         // Напишите свое решение ниже
         throw new ArrayIndexOutOfBoundsException();
