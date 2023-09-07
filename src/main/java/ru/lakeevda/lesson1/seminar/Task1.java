@@ -1,4 +1,4 @@
-package ru.lakeevda.lesson1;
+package ru.lakeevda.lesson1.seminar;
 
 /**
  * Реализуйте метод, принимающий в качестве аргументов целочисленный массив и некоторый допустимый минимум.

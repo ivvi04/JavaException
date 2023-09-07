@@ -1,4 +1,4 @@
-package ru.lakeevda.lesson1;
+package ru.lakeevda.lesson1.seminar;
 
 import java.util.Scanner;
 
