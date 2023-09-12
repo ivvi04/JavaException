@@ -9,12 +9,12 @@ public class Task1 {
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
             while (true) {
                 try {
-                    System.out.println("Введите дробное число: ");
+                    System.out.println("Р’РІРµРґРёС‚Рµ РґСЂРѕР±РЅРѕРµ С‡РёСЃР»Рѕ: ");
                     float fNumber = Float.parseFloat(bufferedReader.readLine());
-                    System.out.printf("Число равно: %f", fNumber);
+                    System.out.printf("Р§РёСЃР»Рѕ СЂР°РІРЅРѕ: %f", fNumber);
                     break;
                 } catch (NumberFormatException e) {
-                    System.out.println("Неверный формат!");
+                    System.out.println("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚!");
                 }
             }
         } catch (IOException e) {

@@ -8,23 +8,23 @@ public class Task3 {
                 int b = 3;
                 System.out.println(a / b);
             } catch (ArithmeticException e) {
-                System.out.println("Деление на ноль!");
+                System.out.println("Р”РµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ!");
             }
 
             try {
                 printSum(23, 234);
             } catch (NullPointerException ex) {
-                System.out.println("Указатель не может указывать на null!");
+                System.out.println("РЈРєР°Р·Р°С‚РµР»СЊ РЅРµ РјРѕР¶РµС‚ СѓРєР°Р·С‹РІР°С‚СЊ РЅР° null!");
             }
 
             try {
                 int[] abc = {1, 2};
                 abc[3] = 9;
             } catch (IndexOutOfBoundsException ex) {
-                System.out.println("Массив выходит за пределы своего размера!");
+                System.out.println("РњР°СЃСЃРёРІ РІС‹С…РѕРґРёС‚ Р·Р° РїСЂРµРґРµР»С‹ СЃРІРѕРµРіРѕ СЂР°Р·РјРµСЂР°!");
             }
         } catch (Throwable ex) {
-            System.out.println("Что-то пошло не так...");
+            System.out.println("Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє...");
         }
     }
 

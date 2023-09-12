@@ -3,7 +3,7 @@ package ru.lakeevda.lesson2.seminar;
 import java.io.*;
 
 /**
- * Заставьте выполниться следующий код
+ * Р—Р°СЃС‚Р°РІСЊС‚Рµ РІС‹РїРѕР»РЅРёС‚СЊСЃСЏ СЃР»РµРґСѓСЋС‰РёР№ РєРѕРґ
  */
 public class Task4 {
     public static void main(String[] args) {
@@ -21,9 +21,9 @@ public class Task4 {
         } catch (Throwable e) {
             e.printStackTrace();
         } finally {
-            System.out.println("Я все равно выполнился!");
+            System.out.println("РЇ РІСЃРµ СЂР°РІРЅРѕ РІС‹РїРѕР»РЅРёР»СЃСЏ!");
         }
-        System.out.println("Я жив!");
+        System.out.println("РЇ Р¶РёРІ!");
     }
 
 

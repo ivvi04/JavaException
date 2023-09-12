@@ -8,10 +8,10 @@ public class Task4 {
     public static void main(String[] args) {
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
             while (true) {
-                System.out.println("Введите строку: ");
+                System.out.println("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: ");
                 try {
                     String s = getString(bufferedReader);
-                    System.out.printf("Введенная строка равна: '%s'", s);
+                    System.out.printf("Р’РІРµРґРµРЅРЅР°СЏ СЃС‚СЂРѕРєР° СЂР°РІРЅР°: '%s'", s);
                     break;
                 } catch (StringEmptyException e) {
                     System.out.println(e.getMessage());
@@ -23,9 +23,9 @@ public class Task4 {
     }
 
     public static String getString(BufferedReader bufferedReader) throws IOException {
-        if (bufferedReader == null) throw new NullPointerException("Указатель не может указывать на null!");
+        if (bufferedReader == null) throw new NullPointerException("РЈРєР°Р·Р°С‚РµР»СЊ РЅРµ РјРѕР¶РµС‚ СѓРєР°Р·С‹РІР°С‚СЊ РЅР° null!");
         String s = bufferedReader.readLine();
-        if (s.equals("")) throw new StringEmptyException("Пустую строку вводить нельзя!");
+        if (s.equals("")) throw new StringEmptyException("РџСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ РІРІРѕРґРёС‚СЊ РЅРµР»СЊР·СЏ!");
         return s;
     }
 }
