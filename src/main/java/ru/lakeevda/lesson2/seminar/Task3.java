@@ -1,6 +1,7 @@
 package ru.lakeevda.lesson2.seminar;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -31,10 +32,10 @@ public class Task3 {
 
     public static void main(String[] args) {
         String path = "task3.txt";
+        System.out.println(strings);
         writeToFile(strings, path);
         System.out.println(readFromList(path));
         rewriteFile(path);
-
     }
 
     /**
@@ -49,7 +50,6 @@ public class Task3 {
                 fileWriter.write(elem + "\n");
             }
             fileWriter.flush();
-
         } catch (IOException e) {
             System.out.println(e.getMessage());;
         } finally {
@@ -59,11 +59,10 @@ public class Task3 {
                 throw new RuntimeException(e);
             }
         }
-
     }
 
     /**
-     * Чтение в лист
+     * Чтение из листа и замена знаков вопросов
      */
     public static Map<String, Integer> readFromList (String path) {
         File file = new File(path);
@@ -79,7 +78,6 @@ public class Task3 {
                 int number;
                 if (temp.equals("?")) number = name.length();
                 else number = Integer.parseInt(temp);
-
                 result.put(name, number);
             }
         } catch (FileNotFoundException e) {
@@ -98,15 +96,12 @@ public class Task3 {
         return result;
     }
 
-
     /**
-     * Изменение листа
+     * Перезапись файла
      */
     public static void rewriteFile (String path) {
         Map<String, Integer> stringIntegerMap = readFromList(path);
-
         List<String> stringList = new ArrayList<>();
-
         for (Map.Entry<String, Integer> entry : stringIntegerMap.entrySet()) {
             stringList.add(entry.toString());
         }
