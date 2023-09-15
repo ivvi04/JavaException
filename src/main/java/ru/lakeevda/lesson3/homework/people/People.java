@@ -18,6 +18,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.SimpleFormatter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Getter
 @Setter
@@ -37,19 +39,27 @@ public class People {
      */
     public void setData (String s) throws PhoneException, GenderException, StringException, BirthdayException {
         List<String> stringList = checkString(s);
-        this.lastName = stringList.get(0);
-        this.firstName = stringList.get(1);
-        this.patronymic = stringList.get(2);
+
+        this.lastName = getNameFromList(stringList, 0);
+        this.firstName = getNameFromList(stringList, 1);
+        this.patronymic = getNameFromList(stringList, 2);
         this.birthday = getBirthdayFromList(stringList, 3);
         this.phone = getPhoneFromList(stringList, 4);
         this.gender = getGenderFromList(stringList, 5);
     }
 
     private List<String> checkString(String s) throws StringException {
-        if (s == null) throw new StringException("Введенная строка не может указывать на null");
+        if (s == null) throw new StringException("Введенная строка не может указывать на null!");
         if (s.equals("")) throw new StringException("Строка не может быть пустой!");
         if (s.split(" ").length != 6) throw new StringException("Строка содержит неверное количество параметров!");
         return Arrays.asList(s.split(" "));
+    }
+
+    private String getNameFromList (List<String> stringList, int index) throws StringException {
+        String result = stringList.get(index);
+        if (!Pattern.matches("^[\\p{L}\\s.’\\-,]+$", result))
+            throw new StringException("Фамилия/Имя/Отчество содержит некорректные символы!");
+        return result;
     }
 
     private LocalDate getBirthdayFromList (List<String> stringList, int index) throws BirthdayException {
@@ -57,7 +67,7 @@ public class People {
         try {
             localDate = LocalDate.parse(stringList.get(index), formatter);
         } catch (Exception e) {
-            throw new BirthdayException("Неверный формат даты рождения");
+            throw new BirthdayException("Неверный формат даты рождения!");
         }
         return localDate;
     }
@@ -68,14 +78,14 @@ public class People {
             phone = Integer.parseInt(stringList.get(index));
             return phone;
         } catch (NumberFormatException e) {
-            throw new PhoneException("Неверный формат номера телефона");
+            throw new PhoneException("Неверный формат номера телефона!");
         }
     }
 
     private Character getGenderFromList (List<String> stringList, int index) throws GenderException{
         String s = stringList.get(index);
-        if (s.length() > 1) throw new GenderException("Пол должен состоять из одного символа");
-        if (s.charAt(0) != 'f' && s.charAt(0) != 'm') throw new GenderException("Пол должен быть f или m");
+        if (s.length() > 1) throw new GenderException("Пол должен состоять из одного символа!");
+        if (s.charAt(0) != 'f' && s.charAt(0) != 'm') throw new GenderException("Пол должен быть f или m!");
         return s.charAt(0);
     }
 
