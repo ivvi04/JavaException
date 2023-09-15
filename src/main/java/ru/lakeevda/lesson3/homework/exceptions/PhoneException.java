@@ -1,4 +1,4 @@
-package ru.lakeevda.lesson3.homework.people.exceptions;
+package ru.lakeevda.lesson3.homework.exceptions;
 
 import java.io.IOException;
 

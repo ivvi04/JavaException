@@ -1,24 +1,17 @@
 package ru.lakeevda.lesson3.homework.people;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.lakeevda.lesson3.homework.people.exceptions.BirthdayException;
-import ru.lakeevda.lesson3.homework.people.exceptions.GenderException;
-import ru.lakeevda.lesson3.homework.people.exceptions.PhoneException;
-import ru.lakeevda.lesson3.homework.people.exceptions.StringException;
+import ru.lakeevda.lesson3.homework.exceptions.BirthdayException;
+import ru.lakeevda.lesson3.homework.exceptions.GenderException;
+import ru.lakeevda.lesson3.homework.exceptions.PhoneException;
+import ru.lakeevda.lesson3.homework.exceptions.StringException;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
-import java.util.logging.SimpleFormatter;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Getter

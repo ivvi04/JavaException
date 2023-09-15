@@ -1,10 +1,10 @@
 package ru.lakeevda.lesson3.homework;
 
 import ru.lakeevda.lesson3.homework.people.People;
-import ru.lakeevda.lesson3.homework.people.exceptions.BirthdayException;
-import ru.lakeevda.lesson3.homework.people.exceptions.GenderException;
-import ru.lakeevda.lesson3.homework.people.exceptions.PhoneException;
-import ru.lakeevda.lesson3.homework.people.exceptions.StringException;
+import ru.lakeevda.lesson3.homework.exceptions.BirthdayException;
+import ru.lakeevda.lesson3.homework.exceptions.GenderException;
+import ru.lakeevda.lesson3.homework.exceptions.PhoneException;
+import ru.lakeevda.lesson3.homework.exceptions.StringException;
 
 import java.io.*;
 import java.util.Scanner;
