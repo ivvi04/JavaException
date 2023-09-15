@@ -34,11 +34,6 @@ public class People {
 
     /**
      * Пример: Иванов Иван Иванович 14.07.1943 431234324 m
-     * @param s
-     * @throws PhoneException
-     * @throws GenderException
-     * @throws StringException
-     * @throws ParseException
      */
     public void setData (String s) throws PhoneException, GenderException, StringException, BirthdayException {
         List<String> stringList = checkString(s);
